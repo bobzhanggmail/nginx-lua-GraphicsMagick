@@ -28,6 +28,8 @@ if index then
         originalFile1 = string.sub(originalFile, 0, index2-2)..ext;
         originalUri = originalUri..ext;
     end
+else 
+     ngx.exit(404);
 end
 
 local image_sizes = {"80x80", "800x600", "40x40", "300x300"};
